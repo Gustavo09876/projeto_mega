@@ -4,9 +4,6 @@ import {Formulario_Email} from '../Modulos/Formulario';
 import {Formulario_Senha} from '../Modulos/Formulario';
 import Logo from '../Modulos/Leveza';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { width } from '@fortawesome/free-solid-svg-icons/fa0';
 
 export default function Home() {
   return (
@@ -65,7 +62,7 @@ export default function Home() {
       >
         {/* Logo da aplicação */}
         <Image
-          src="/assets/pictures/titles/Titulo.png"
+          src="/assets/pictures/Icons/Titulo.png"
           alt="Logo"
           width={383}
           height={181}
@@ -110,18 +107,25 @@ export default function Home() {
               zIndex: 3,
             }}
           >
-            <button
-              className="Entrar"
+            <Link
+              href="/Home"
+              className="CriarConta"
               style={{
+                display: 'inline-block',
                 width: '100%',
                 height: '64px',
                 borderRadius: '5px',
                 background: '#FA8072',
+                fontSize: '16px',
+                marginTop: '10px',
+                color: '#fff',
+                textAlign: 'center',
+                lineHeight: '64px',
+                textDecoration: 'none',
               }}
             >
               Acessar Conta
-            </button>
-
+            </Link>
             <h5 style={{ fontSize: '12px', marginTop: '8px' }}>
               Não tem uma conta?{' '}
               <Link href="/Cadastro" style={{ color: '#ef4444', textDecoration: 'underline' }}>
