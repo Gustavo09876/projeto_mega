@@ -5,39 +5,6 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-.Login {
-  width: 400;
-  height: 216;
-}
-.LoginInp {
-  width: 400px;
-  height: 60px;
-  border-width: 1px;
-  border-radius: 10px;
-  padding-left: 10px;
-  background: #FFFFFF;
-  border: 1px solid #000000,
-  
-}
-
-.LoginInp::placeholder{
-  font-family: Inter;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: #7E7E7E4D;
-  opacity: 100%;
-
-}
-.Entrar {
-  width: 284px;
-  height: 64px;
-  border-radius: 5px;
-  background: #FA8072;
-  margin-top: 20px;
-}
-
-
 
 h2 {
   font-family: Montserrat;
@@ -55,24 +22,12 @@ h3 {
   letter-spacing: 0%;
   color: #000;
 }
-h4 {
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 0%;
-  text-decoration-skip-ink: auto;
-  color: #FA8072;
-}
 
 h6 {
   font-family: Montserrat;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 20px;
   line-height: 80px;
   letter-spacing: 0%;
-
 }
+
