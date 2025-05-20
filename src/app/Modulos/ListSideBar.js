@@ -1,8 +1,8 @@
-export default function SidebarLabels() {
+export default function SidebarLabels({ isExpanded }) {
   const labels = [
-    { id: 1, color: '#FF5F5F', text: 'AB', selected: true },
-    { id: 2, color: '#D16DFF', text: 'CD', selected: false },
-    { id: 3, color: '#FFE066', text: 'EF', selected: false },
+    { id: 1, color: '#FF5F5F', text1: 'AB', text2: 'BA', selected: true },
+    { id: 2, color: '#D16DFF', text1: 'CD', text2: 'DC', selected: false },
+    { id: 3, color: '#FFE066', text1: 'EF', text2: 'FE', selected: false },
   ];
 
   return (
@@ -38,7 +38,10 @@ export default function SidebarLabels() {
               paddingLeft: '10px',  
             }}
           >
-            {label.text}
+            {label.text1}
+            {isExpanded ? (
+              <span>{label.text2}</span>
+            ) : null}
           </span>
         </div>
       ))}
