@@ -23,27 +23,11 @@ const Input = styled.input`
   }
 `;
 
-export const Formulario_Email = () => {
+export default function Formulario({Text, type, placeholder}) {
   return (
     <label>
-      <h3>E-mail</h3>
-      <Input type="email" placeholder="Insira seu e-mail" />
-    </label>
-  );
-};
-
-export const Formulario_Senha = () => {
-  return (
-    <label>
-      <h3>Senha</h3>
-      <Input type="password" placeholder="Insira sua senha" />
-    </label>
-  );
-};
-export const Formulario_SenhaC = () => {
-  return (
-    <label>
-      <Input type="password" placeholder="Insira sua senha novamente" />
+      <h3>{Text}</h3>
+      <Input type={type} placeholder={placeholder} />
     </label>
   );
 };

@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import {Formulario_Email} from '../Modulos/Formulario';
-import {Formulario_Senha} from '../Modulos/Formulario';
-import {Formulario_SenhaC} from '../Modulos/Formulario';
+import Formulario from '../Modulos/Formulario';
+import BotaoEntrar from '../Modulos/BotaoEntrar';
 import Link from 'next/link';
 
 export default function Home() {
@@ -71,11 +70,11 @@ export default function Home() {
               alignItems: 'start', 
             }}>
             {/* Campo de e-mail */}
-            <Formulario_Email/>
+            <Formulario Text="E-mail" type="email" placeholder="Insira seu E-mail"/>
             {/* Campo de senha */}
-            <Formulario_Senha/>
+            <Formulario Text="Senha" type="password" placeholder="Insira sua senha"/>
             {/* Campo de confirmar senha */}
-            <Formulario_SenhaC/>
+            <Formulario Text="" type="email" placeholder="Insira sua senha novamente"/>
             {/* Link para recuperação de senha */}
           </div>
 
@@ -108,25 +107,7 @@ export default function Home() {
             </div>
 
             {/* Botão Criar Conta */}
-            <Link
-              href="/Home"
-              className="CriarConta"
-              style={{
-                display: 'inline-block',
-                width: '100%',
-                height: '64px',
-                borderRadius: '5px',
-                background: '#FA8072',
-                fontSize: '16px',
-                marginTop: '10px',
-                color: '#fff',
-                textAlign: 'center',
-                lineHeight: '64px',
-                textDecoration: 'none',
-              }}
-            >
-              Criar Conta
-            </Link>
+            <BotaoEntrar Text="Criar Conta" href="/Dashboard/Home" />
             {/* Link para login */}
             <h5 style={{ fontSize: '12px', marginTop: '8px' }}>
                 Já possui uma conta?{' '}

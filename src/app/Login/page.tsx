@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import {Formulario_Email} from '../Modulos/Formulario';
-import {Formulario_Senha} from '../Modulos/Formulario';
+import Formulario from '../Modulos/Formulario';
+import BotaoEntrar from '../Modulos/BotaoEntrar';
 import Logo from '../Modulos/Leveza';
 import Link from 'next/link';
 
@@ -57,6 +57,7 @@ export default function Home() {
           display: 'flex',
           flexDirection: 'column',
           alignContent: 'space-arround',
+          alignItems: 'start',
           zIndex: 2,
         }}
       >
@@ -89,44 +90,23 @@ export default function Home() {
               alignItems: 'start', 
             }}>
             {/* Campo de e-mail */}
-            <Formulario_Email/>
+            <Formulario Text="E-mail" type="email" placeholder="Insira seu E-mail"/>
             {/* Campo de senha */}
-            <Formulario_Senha/>
+            <Formulario Text="Senha" type="senha" placeholder="Insira sua senha"/>
             {/* Link para recuperação de senha */}
           </div>
 
           {/* Botão de acesso e link para cadastro */}
-          <div
-            style={{
-              position: 'fixed',
-              bottom: '10px',
-              width: '400px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              zIndex: 3,
-            }}
-          >
-            <Link
-              href="/Home"
-              className="CriarConta"
-              style={{
-                display: 'inline-block',
-                width: '100%',
-                height: '64px',
-                borderRadius: '5px',
-                background: '#FA8072',
-                fontSize: '16px',
-                marginTop: '10px',
-                color: '#fff',
-                textAlign: 'center',
-                lineHeight: '64px',
-                textDecoration: 'none',
-              }}
-            >
-              Acessar Conta
-            </Link>
-            <h5 style={{ fontSize: '12px', marginTop: '8px' }}>
+          <div style={{
+            width: '400px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            marginTop: '40px',
+          }}>
+            <BotaoEntrar Text="Acessar Conta" href="/Dashboard/Home" />
+
+            <h5 style={{ fontSize: '12px', marginTop: '8px', textAlign: 'center' }}>
               Não tem uma conta?{' '}
               <Link href="/Cadastro" style={{ color: '#ef4444', textDecoration: 'underline' }}>
                 Cadastre-se

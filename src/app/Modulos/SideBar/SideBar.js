@@ -1,8 +1,8 @@
 'use client';
-import Image from 'next/image';
 import React, {useState} from 'react';
-import SidebarLabels from '../Modulos/ListSideBar.js';
-import SideBarTitle from '../Modulos/SideBarTitle.js';
+import Image from 'next/image';
+import SidebarLabels from './ListSideBar.js';
+import SideBarTitle from './SideBarTitle.js';
 
 export default function Home() {
   const [isExpanded, setIsExpanded] = useState(false);
