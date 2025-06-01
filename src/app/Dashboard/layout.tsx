@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import Sidebar from '../Modulos/SideBar/SideBar';
+import Sidebar from './SideBar/SideBar';
 
 export default function DashboardLayout({
   children,

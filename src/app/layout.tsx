@@ -1,4 +1,6 @@
 import "./globals.css";
+import { GroupsProvider } from "./GroupsContext";
+import { TasksProvider } from "./TasksContext";
 
 export default function RootLayout({
   children,
@@ -6,11 +8,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        {children}
+    <html lang="pt-br">
+      <body className="antialiased">
+        <GroupsProvider>
+          <TasksProvider> 
+            {children}
+          </TasksProvider>
+        </GroupsProvider>
       </body>
     </html>
   );
